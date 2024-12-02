@@ -4,6 +4,7 @@ const updateProductForm = document.querySelector('#update-product-form');
 const updateProductId = document.querySelector('#update-id');
 const updateProductName = document.querySelector('#update-name');
 const updateProductPrice = document.querySelector('#update-price');
+const updateProductDescription = document.querySelector('#update-description');
 
 // Function to fetch all products from the server
 async function fetchProducts() {
@@ -34,6 +35,10 @@ async function fetchProducts() {
       updateProductId.value = product.id;
       updateProductName.value = product.name;
       updateProductPrice.value = product.price;
+      updateProductDescription.value = product.description;
+
+      updateProductForm.style.display = 'block'; // Mostra o formulário de atualização
+      addProductForm.style.display = 'none';
     });
     li.appendChild(updateButton);
 
